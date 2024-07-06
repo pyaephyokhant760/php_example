@@ -3,18 +3,20 @@ declare(strict_types = 1);
 error_reporting(E_ALL);
 ini_set("display_error",1);
 
-
-class Dog {
+abstract class Animal{
     public $name;
     public $color;
+}
+class Dog extends Animal{
     public function bark() {
         echo "Woff";
     }
 }
-class cat {
-    public $name;
-    public $color;
+class cat extends Animal{
     public function bark() {
+        echo "Woff";
+    }
+    public function eat() {
         echo "Woff";
     }
 }
@@ -33,3 +35,5 @@ $cat = new cat();
     echo $cat->color;
     $cat->bark();
 
+$dog2 = new Dog();
+$cat2 = new cat();
